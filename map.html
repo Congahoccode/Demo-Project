@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>EcoLaunch Pad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="./logo.png" alt="Logo" />
+        <span>Rainbow Cloud</span>
+      </div>
+
+      <nav class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./challenge.html">Challenges</a>
+        <a href="./project.html">Projects</a>
+        <div class="dropdown">
+          <button class="dropbtn">More ▼</button>
+          <div class="dropdown-content">
+            <a href="#" class="active">Map</a>
+            <a href="./resource.html">Resources</a>
+            <a href="./about.html">About</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Map Section -->
+    <section id="map-section">
+      <div id="map"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Leaflet map
+      var map = L.map("map").setView(
+        [10.875724296752493, 106.79911716534066], 12
+      ); // Hà Nội
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+      }).addTo(map);
+
+      L.marker([10.875724296752493, 106.79911716534066])
+        .addTo(map)
+        .bindPopup("<b>EcoLaunch Pad HQ</b><br>Hà Nội, Việt Nam")
+        .openPopup();
+    </script>
+  </body>
+</html>

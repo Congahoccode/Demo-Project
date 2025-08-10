@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoLaunch Pad</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0b1d26;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .hero-text {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #00ffcc;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        color: #d0f0f0;
+    }
+
+    .cta-btn {
+        background: linear-gradient(45deg, #00ffcc, #0088ff);
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+        transform: scale(1.05);
+        background: linear-gradient(45deg, #00ffaa, #0066cc);
+    }
+
+    /* Globe Container */
+    #globe-container {
+        flex: 1;
+        height: 500px;
+    }
+
+    @media (max-width: 900px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+        #globe-container {
+            width: 100%;
+            height: 400px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>EcoLaunch Pad</h1>
+        <p>Empowering Green Innovation – Launch Your Eco Future.  
+           Together, we innovate for a cleaner, greener planet.</p>
+        <button class="cta-btn">Join the Mission</button>
+    </div>
+    <div id="globe-container"></div>
+</section>
+
+<!-- Scripts for Globe -->
+<script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+<script src="https://unpkg.com/globe.gl@4.6.0/dist/globe.gl.min.js"></script>
+<script>
+    const globeContainer = document.getElementById('globe-container');
+    const world = Globe()
+        (globeContainer)
+        .globeImageUrl('#') // Thay bằng ảnh texture Trái Đất
+        .bumpImageUrl('#')  // Thay bằng ảnh bump map
+        .backgroundColor('#0b1d26')
+        .showAtmosphere(true)
+        .atmosphereColor('#00ffcc')
+        .atmosphereAltitude(0.15)
+        .width(globeContainer.offsetWidth)
+        .height(globeContainer.offsetHeight);
+
+    // Quay nhẹ
+    world.controls().autoRotate = true;
+    world.controls().autoRotateSpeed = 0.8;
+</script>
+
+</body>
+</html>

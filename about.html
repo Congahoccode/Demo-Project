@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoLaunch Pad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="./logo.png" alt="Logo" />
+        <span>Rainbow Cloud</span>
+      </div>
+      <nav class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./challenge.html">Challenges</a>
+        <a href="./project.html">Projects</a>
+        <div class="dropdown">
+          <button class="dropbtn">More ▼</button>
+          <div class="dropdown-content">
+            <a href="./map.html">Map</a>
+            <a href="./resource.html">Resources</a>
+            <a href="#" class="active">About</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>Meet Our Team</h2>
+      <div class="team">
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/d6/d6/0b/d6d60b01c2d4503b054c4a2e1543780d.jpg" alt="Member 1" />
+          <h3>Hà Công Thuận</h3>
+          <p>Team Leader - Quản lý dự án và điều phối nhóm</p>
+        </div>
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/90/0e/f9/900ef947ee6fa572131d224eb26a2e0d.jpg" alt="Member 2" />
+          <h3>Phan Lê Thành Nhân</h3>
+          <p>Front-end Developer - Thiết kế giao diện web</p>
+        </div>
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/4d/ed/bb/4dedbb317477a23ee290f67bda7be7b5.jpg" alt="Member 3" />
+          <h3>Nguyễn Ngọc Tin</h3>
+          <p>Back-end Developer - Xử lý dữ liệu và API</p>
+        </div>
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/a3/39/9d/a3399da5fb2b673910669f3ac226d0d5.jpg" alt="Member 4" />
+          <h3>Trần Đức Quân</h3>
+          <p>UI/UX Designer - Trải nghiệm người dùng</p>
+        </div>
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/ac/c1/24/acc12492b3122360ae0653deea98feb4.jpg" alt="Member 5" />
+          <h3>Lương Thanh Nhã</h3>
+          <p>Lên ý tưởng- Phân tích dữ liệu</p>
+        </div>
+        <div class="member">
+          <img src="https://i.pinimg.com/736x/53/cf/95/53cf95750fc744c69e44692aa03d4bd1.jpg" alt="Member 6" />
+          <h3>Nguyễn Thị Kim Trân</h3>
+          <p>Lên ý tưởng - Thiết kế dự án</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu")
+        .addEventListener("click", function () {
+          document.getElementById("nav-links").classList.toggle("show");
+        });
+
+      // Leaflet map
+      var map = L.map("map").setView([10.762622, 106.660172], 10);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+    }).addTo(map);
+
+      L.marker([10.762622, 106.660172])
+        .addTo(map)
+        .bindPopup("<b>EcoLaunch Pad HQ</b><br>TP Hồ Chí Minh, Việt Nam")
+        .openPopup();
+    </script>
+  </body>
+</html>

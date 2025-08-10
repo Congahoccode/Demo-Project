@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Launch Pad</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="./logo.png" alt="Logo" />
+        <span>Rainbow Cloud</span>
+      </div>
+
+      <nav class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./challenge.html">Challenges</a>
+        <a href="./project.html" class="active">Projects</a>
+        <div class="dropdown">
+          <button class="dropbtn">More ▼</button>
+          <div class="dropdown-content">
+            <a href="./map.html">Map</a>
+            <a href="./resource.html">Resources</a>
+            <a href="./about.html">About</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="map-section">
+        <div id="map"></div>
+      </div>
+
+      <div class="resources">
+        <h2>Tài nguyên</h2>
+        <ul>
+          <li><a href="report.pdf" target="_blank">📄 Báo cáo dự án</a></li>
+          <li><a href="dataset.zip" download>📦 Dataset</a></li>
+          <li>
+            <a
+              href="https://developers.google.com/maps/documentation"
+              target="_blank"
+              <!-- Leaflet JS -->
+              <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+              <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+              <script>
+                // Leaflet map
+                var map = L.map("map").setView([10.762622, 106.660172], 12); // TP.HCM
+
+                L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                  maxZoom: 18,
+                }).addTo(map);
+
+                L.marker([10.762622, 106.660172])
+                  .addTo(map)
+                  .bindPopup("<b>Eco Launch Pad</b><br>TP.HCM, Việt Nam")
+                  .openPopup();
+              </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA66KwUrjxcFG5u0exynlJ45CrbrNe3hEc&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

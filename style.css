@@ -1,0 +1,671 @@
+/* Hero section cho challenge */
+.hero {
+  background: linear-gradient(120deg, #e0ffe7 60%, #f4f7cd 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(76, 175, 80, 0.1);
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 1000px;
+}
+.hero h2 {
+  color: #219150;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero p {
+  color: #1b4332;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+/* Banner và các section nối tiếp dạng earth-data-banner */
+.earth-data-banner {
+  width: 100%;
+  background: linear-gradient(120deg, #e0ffe7 60%, #f4f7cd 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(76, 175, 80, 0.1);
+  margin: 3.5rem auto 3.5rem auto;
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  display: block;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.earth-data-content {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.earth-data-reverse {
+  flex-direction: row-reverse;
+}
+.earth-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px rgba(76, 175, 80, 0.13);
+  border: 4px solid #b8f8ba;
+  margin: 0 auto 1.5rem auto;
+  @media (max-width: 800px) {
+    .earth-data-banner {
+      padding: 1.5rem 0.5rem 2.5rem 0.5rem;
+      margin: 2rem auto 2rem auto;
+    }
+    .earth-data-content {
+      max-width: 98vw;
+    }
+    .earth-img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.earth-info {
+  max-width: 500px;
+  flex: 1 1 300px;
+}
+.earth-info h2 {
+  color: #219150;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.earth-info p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.btn-explore {
+  display: inline-block;
+  background: linear-gradient(90deg, #4caf50 60%, #b8f8ba 100%);
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-explore:hover {
+  background: linear-gradient(90deg, #219150 60%, #b8f8ba 100%);
+  transform: scale(1.06);
+}
+/* Why list */
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.why-list li {
+  font-size: 1.1rem;
+  color: #1b4332;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.why-icon {
+  font-size: 1.5rem;
+}
+/* Slider wrapper */
+.slider-wrapper {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.7rem;
+}
+.slider-wrapper img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.slider-wrapper img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.15);
+}
+/* Video wrapper */
+.video-wrapper {
+  margin-top: 1rem;
+}
+.video-wrapper iframe {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(76, 175, 80, 0.1);
+}
+/* Stats list */
+.stats-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 1.2rem auto 3.5rem auto;
+}
+.stat-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(76, 175, 80, 0.08);
+  padding: 1.2rem 2rem;
+  text-align: center;
+  min-width: 120px;
+  min-height: 90px;
+  flex: 1 1 180px;
+  max-width: 220px;
+  margin-bottom: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.15);
+}
+.stat-num {
+  font-size: 2rem;
+  color: #219150;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.stat-label {
+  color: #333;
+  font-size: 1.05rem;
+}
+/* Banner phân tích dữ liệu Trái Đất từ NASA */
+.earth-data-banner {
+  width: 100%;
+  background: linear-gradient(120deg, #e0ffe7 60%, #f4f7cd 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(76, 175, 80, 0.1);
+  margin: 2.5rem auto 2rem auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.earth-data-content {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.earth-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 16px rgba(76, 175, 80, 0.13);
+  border: 4px solid #b8f8ba;
+}
+.earth-info {
+  max-width: 500px;
+}
+.earth-info h2 {
+  color: #219150;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.earth-info p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.btn-explore {
+  display: inline-block;
+  background: linear-gradient(90deg, #4caf50 60%, #b8f8ba 100%);
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-explore:hover {
+  background: linear-gradient(90deg, #219150 60%, #b8f8ba 100%);
+  transform: scale(1.06);
+}
+#begin {
+  text-align: center;
+  color: #219150;
+  padding: 32px 0 18px 0;
+  background-image: url(https://i.pinimg.com/736x/97/ac/2a/97ac2a47cdcbf87fa85cec35d1447862.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#begin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(253, 251, 251, 0.72);
+  z-index: 0;
+}
+#begin h1,
+#begin p {
+  position: relative;
+  z-index: 1;
+}
+#begin h1 {
+  margin-bottom: 0.5rem;
+}
+#begin p {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #1b4332;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.07);
+}
+.challenges .card {
+  flex: 1 1 0;
+  min-width: 340px;
+  max-width: 480px;
+  min-height: 340px;
+  max-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-weight: 520;
+  font-size: 1.15rem;
+}
+
+.challenges {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto 2.5rem auto;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 70vh;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .challenges {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  .challenges .card {
+    min-width: 260px;
+    flex: 0 0 auto;
+  }
+}
+/* Bản đồ nhỏ hơn ở project.html */
+.map-section #map {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+/* Giới hạn kích thước ảnh trong card tài nguyên */
+.card img {
+  max-height: 64px;
+  width: auto;
+  display: block;
+  margin: 0 auto 12px auto;
+}
+/* Giữ nội dung trong khung trang, căn giữa và responsive */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 160px);
+}
+
+#map {
+  flex: 2;
+  height: 100%;
+}
+
+#info-panel {
+  flex: 1;
+  background: #ecf0f1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #e0ffe7 0%, #a0f1ed 100%);
+  border-radius: 18px;
+  padding: 1.5rem 1rem 1.2rem 1rem;
+  box-shadow: 0 4px 24px rgba(76, 175, 80, 0.1), 0 1.5px 6px rgba(0, 0, 0, 0.07);
+  border: 2px solid #b8f8ba;
+  transition: transform 0.25s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(76, 175, 80, 0.08) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 18px;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.04) rotate(-1deg);
+  box-shadow: 0 12px 36px rgba(76, 175, 80, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: #4caf50;
+}
+.card h3 {
+  color: #219150;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  z-index: 1;
+  position: relative;
+}
+.card p {
+  color: #333;
+  margin-bottom: 1rem;
+  z-index: 1;
+  position: relative;
+}
+.card button {
+  background: linear-gradient(90deg, #4caf50 60%, #6f9271 100%);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 1;
+  position: relative;
+}
+.card button:hover {
+  background: linear-gradient(90deg, #219150 60%, #b8f8ba 100%);
+  transform: scale(1.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  /* background-image: url(https://i.pinimg.com/1200x/62/d2/57/62d2579f1885551c30289f99ac055ac1.jpg) ; */
+  background-color: #b8f8ba;
+  font-weight: 400;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 0;
+  position: relative;
+}
+
+.menu a.active {
+  color: #4caf50;
+}
+
+.menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #4caf50;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 120px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.auth a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.auth a:hover {
+  text-decoration: underline;
+}
+
+/* // Tab about section*/
+#about {
+  background: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+}
+#about h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #1b4332;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.member {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.member:hover {
+  transform: translateY(-5px);
+}
+.member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.member h3 {
+  margin: 10px 0 5px;
+  color: #1b4332;
+}
+.member p {
+  font-size: 0.9em;
+  color: #555;
+}
+/* //Map  */
+#map {
+  height: 900px;
+  width: 100%;
+}
+/* Responsive menu */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #1b4332;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menu-toggle {
+    cursor: pointer;
+    display: block;
+  }
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+}
+.menu-toggle span {
+  background: white;
+  height: 3px;
+  margin: 4px;
+  width: 25px;
+}
+/* // Resources section */
+/* Khu vực tài nguyên */
+.resources {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.resources h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.resources ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resources li {
+  margin-bottom: 10px;
+}
+
+.resources a {
+  text-decoration: none;
+  color: #1b5e20;
+}
+
+.resources a:hover {
+  text-decoration: underline;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0 24px 0;
+}
+.search-bar input[type="text"] {
+  width: 320px;
+  padding: 12px 18px;
+  border: 1.5px solid #b8f8ba;
+  border-radius: 24px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 2px 12px rgba(76, 175, 80, 0.08);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.search-bar input[type="text"]:focus {
+  border: 1.5px solid #4caf50;
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.15);
+}
